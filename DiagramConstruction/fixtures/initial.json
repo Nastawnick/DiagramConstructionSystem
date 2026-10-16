@@ -1,0 +1,77 @@
+[
+{
+  "model": "DiagramConstruction.user",
+  "pk": 1,
+  "fields": {
+    "login": "User_001",
+    "hash": "hash_password_001"
+  }
+},
+{
+  "model": "DiagramConstruction.session",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "token": "user_token_001",
+    "end_date": "2026-12-01"
+  }
+},
+{
+  "model": "DiagramConstruction.theme",
+  "pk": 1,
+  "fields": {
+    "title": "Conditionals",
+    "description": "”словные предложени€ описывают ситуации ЂеслиЕ тоЕї. 2nd Ч нереальное насто€щее (мечты, гипотезы). 3rd Ч нереальное прошлое (сожаление о том, что не случилось). Mixed Ч условие в прошлом, а результат в насто€щем."
+  }
+},
+{
+  "model": "DiagramConstruction.mistake",
+  "pk": 1,
+  "fields": {
+    "title": "Grammar of the verb",
+    "description": "Grammar of the verb (грамматика глагола) Ч это раздел грамматики, который описывает всЄ, что св€зано с глаголом: как он мен€етс€, как согласуетс€, как образует конструкции"
+  }
+},
+{
+  "model": "DiagramConstruction.mistake",
+  "pk": 2,
+  "fields": {
+    "title": "Sentence structure",
+    "description": "это раздел грамматики, который описывает, как слова и части предложени€ располагаютс€ и соедин€ютс€ между собой"
+  }
+},
+{
+  "model": "DiagramConstruction.servermessage",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "message_text": "Hello, let's start the conversation! How well do you know English?",
+    "expected_response": "Hi, I think I know English pretty well.",
+    "message_date": "2026-10-16",
+    "themes": [
+      1
+    ]
+  }
+},
+{
+  "model": "DiagramConstruction.usermessage",
+  "pk": 1,
+  "fields": {
+    "session": 1,
+    "server_message": 1,
+    "user": 1,
+    "message_text": "Hello, I don't know anything",
+    "message_length": 5,
+    "message_date": "2026-10-16",
+    "correct": false
+  }
+},
+{
+  "model": "DiagramConstruction.usermistake",
+  "pk": 1,
+  "fields": {
+    "user_message": 1,
+    "mistake": 1
+  }
+}
+]
